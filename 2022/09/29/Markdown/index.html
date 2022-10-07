@@ -138,7 +138,7 @@
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
         <h1 id="占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章"><a href="#占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章" class="headerlink" title="占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章"></a>占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章</h1><h2 id="就当是一个监督学习的文章占楼！"><a href="#就当是一个监督学习的文章占楼！" class="headerlink" title="就当是一个监督学习的文章占楼！"></a>就当是一个监督学习的文章占楼！</h2><p>Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。（搜索引擎得来）<br>Markdown的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。</p>
-<p>1.<a href="#1">标题语法</a><br>2.<a href="#2">代码语法</a><br>3.<a href="#3">目录语法</a></p>
+<p>1.<a href="#1">标题语法</a><br>2.<a href="#2">插入代码语法</a><br>3.<a href="#3">跳转目录语法</a><br>4.<a href="#4">插入图片语法</a></p>
 <p id="1"></p> 
 
 <h2 id="1-Markdown标题语法"><a href="#1-Markdown标题语法" class="headerlink" title="1.Markdown标题语法"></a>1.Markdown标题语法</h2><p>要创建标题，在单词或短语前面添加井号 (#):由一到六，#越多标题文字显示越小</p>
@@ -162,6 +162,17 @@ int j=0;
 <p>正常来说标题链接就是小标题的名字，但是我发现我用了之后只能在vscode编写的时候可以跳转，而在网页中无效，我也不知道什么原因，搜索之后也不知道，所以我才用了另一种方法，就是在标题的上方加上这句</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[相应标题](#锚点)</span><br><span class="line"></span><br><span class="line">&lt;p id= &quot;锚点&quot;&gt;&lt;/p&gt;  //这里的锚点最好用数字1234，很好用</span><br></pre></td></tr></table></figure>
 <p>这样就可以跳转啦</p>
+<p id="4"></p>
+
+<h2 id="4-Markdown插入图片语法"><a href="#4-Markdown插入图片语法" class="headerlink" title="4.Markdown插入图片语法"></a>4.Markdown插入图片语法</h2><p>图片相关的代码很简单，常用的就两种（准确的说是我常用），第一种就是简单地插入图片或gif，代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">![简单描述，不会显示](图片地址 &quot;图片描述，当鼠标悬停会显示&quot;)</span><br><span class="line"></span><br><span class="line">示例代码：</span><br><span class="line"></span><br><span class="line">![简单描述，不会显示](https://upload-bbs.mihoyo.com/format,gif &quot;图片描述，当鼠标悬停会显示&quot;)</span><br></pre></td></tr></table></figure>
+<p>示例如下<br><img src="https://upload-bbs.mihoyo.com/upload/2022/10/04/286746010/cfec48f4dc28a69315f9986dae9d5561_7495227528267660980.gif?x-oss-process=image/auto-orient,0/interlace,1/format,gif" alt="图片" title="可爱的小东西"></p>
+<p>而如果想插入链接，就是点击图片跳转，需要再用一个方括号将原有Markdown图片语法括起来，然后在旁边加上需要链接的网址，如下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[![简单描述，不会显示](图片地址 &quot;图片描述，当鼠标悬停会显示&quot;)](网址)</span><br></pre></td></tr></table></figure>
+
+<p>如下图</p>
+<p><a target="_blank" rel="noopener" href="https://www.bh3.com/"><img src="https://upload-bbs.mihoyo.com/upload/2022/09/27/33087162/56c1464ae633055b7bb74bb3f924328a_3330391065587151535.png" alt="图片" title="好美"></a></p>
+<p>当然，Markdown应该也能等比例缩小图片，但目前还在探索，先去吃饭了</p>
 
       </section>
 
