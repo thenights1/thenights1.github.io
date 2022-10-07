@@ -26,7 +26,7 @@
 
   
 
-  <title>Markdown基础语法 | 菜鸟的第一个博客</title>
+  <title>Markdown基础语法总结 | 菜鸟的第一个博客</title>
 
   
 
@@ -102,7 +102,7 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Markdown基础语法</h1>
+          <h1 class="title-wrap">Markdown基础语法总结</h1>
           <h2 class="title-sub-wrap">
             <strong>bugmaker</strong>
             <span>发布于</span>
@@ -138,18 +138,30 @@
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
         <h1 id="占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章"><a href="#占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章" class="headerlink" title="占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章"></a>占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章</h1><h2 id="就当是一个监督学习的文章占楼！"><a href="#就当是一个监督学习的文章占楼！" class="headerlink" title="就当是一个监督学习的文章占楼！"></a>就当是一个监督学习的文章占楼！</h2><p>Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。（搜索引擎得来）<br>Markdown的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。</p>
-<p>*<a href="#1markdown%E6%A0%87%E9%A2%98%E8%AF%AD%E6%B3%95">标题语法</a><br>*<a href="#2markdown%E4%BB%A3%E7%A0%81%E8%AF%AD%E6%B3%95">代码语法</a></p>
+<p>1.<a href="#1">标题语法</a><br>2.<a href="#2">代码语法</a><br>3.<a href="#3">目录语法</a></p>
+<p id="1"></p> 
+
 <h2 id="1-Markdown标题语法"><a href="#1-Markdown标题语法" class="headerlink" title="1.Markdown标题语法"></a>1.Markdown标题语法</h2><p>要创建标题，在单词或短语前面添加井号 (#):由一到六，#越多标题文字显示越小</p>
 <p>如下所示</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># head1</span><br><span class="line">## head2</span><br><span class="line">### head3</span><br><span class="line">#### head4</span><br><span class="line">##### head5</span><br><span class="line">###### head6</span><br></pre></td></tr></table></figure>
 <p>效果如下（注意#后面要加空格）</p>
-<h1 id="head1"><a href="#head1" class="headerlink" title="head1"></a>head1</h1><h2 id="head2"><a href="#head2" class="headerlink" title="head2"></a>head2</h2><h3 id="head3"><a href="#head3" class="headerlink" title="head3"></a>head3</h3><h4 id="head4"><a href="#head4" class="headerlink" title="head4"></a>head4</h4><h5 id="head5"><a href="#head5" class="headerlink" title="head5"></a>head5</h5><h6 id="head6"><a href="#head6" class="headerlink" title="head6"></a>head6</h6><h2 id="2-Markdown代码语法"><a href="#2-Markdown代码语法" class="headerlink" title="2.Markdown代码语法"></a>2.Markdown代码语法</h2><p>（突然想到也没必要按顺序写笔记，应该是学了什么写什么，嘿嘿，好久没更新了，来浅浅更新一下）</p>
+<h1 id="head1"><a href="#head1" class="headerlink" title="head1"></a>head1</h1><h2 id="head2"><a href="#head2" class="headerlink" title="head2"></a>head2</h2><h3 id="head3"><a href="#head3" class="headerlink" title="head3"></a>head3</h3><h4 id="head4"><a href="#head4" class="headerlink" title="head4"></a>head4</h4><h5 id="head5"><a href="#head5" class="headerlink" title="head5"></a>head5</h5><h6 id="head6"><a href="#head6" class="headerlink" title="head6"></a>head6</h6><p id="2"></p>
+
+<h2 id="2-Markdown代码语法"><a href="#2-Markdown代码语法" class="headerlink" title="2.Markdown代码语法"></a>2.Markdown代码语法</h2><p>（突然想到也没必要按顺序写笔记，应该是学了什么写什么，嘿嘿，好久没更新了，来浅浅更新一下）</p>
 <p>Markdown支持直接用行缩进四个空格或者一个制表符来创建一个代码块,但是这种要注意代码块要和上一段留出一行来，不然就会无法显示代码块</p>
 <pre><code>int i=;
 int j=0;
 </code></pre>
 <p>就像上面这种，但是这样我感觉，很不方便，所以我更倾向于下面这种，在代码块的上下分别用用三个~或者三个```将其包起来，这样还能显示代码行数，我更倾向于这种</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~~~  </span><br><span class="line">int i=0;</span><br><span class="line">int j=0;</span><br><span class="line">~~~</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">~~~  </span><br><span class="line">int i=0;</span><br><span class="line">int j=0;</span><br><span class="line">~~~</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p id="3"></p>
+
+<h2 id="3-Markdown跳转目录语法"><a href="#3-Markdown跳转目录语法" class="headerlink" title="3.Markdown跳转目录语法"></a>3.Markdown跳转目录语法</h2><p>这个我测试了半天，简单如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[标题名](#标题链接)</span><br></pre></td></tr></table></figure>
+<p>正常来说标题链接就是小标题的名字，但是我发现我用了之后只能在vscode编写的时候可以跳转，而在网页中无效，我也不知道什么原因，搜索之后也不知道，所以我才用了另一种方法，就是在标题的上方加上这句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[相应标题](#锚点)</span><br><span class="line"></span><br><span class="line">&lt;p id= &quot;锚点&quot;&gt;&lt;/p&gt;  //这里的锚点最好用数字1234，很好用</span><br></pre></td></tr></table></figure>
+<p>这样就可以跳转啦</p>
 
       </section>
 
