@@ -130,7 +130,7 @@
 </ul>
           <ul class="wrap-list dark">
   
-    <li><a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">🏷️ 知识点</a></li>
+    <li><a href="/tags/%E7%AC%94%E8%AE%B0/">🏷️ 笔记</a></li>
   
 </ul>
         </div>
@@ -140,7 +140,8 @@
 
   
   
-  
+
+  <meta name="referrer" content="no-referrer" />
 </header>
 
     <!-- 文章 -->
@@ -179,14 +180,14 @@
 <li>放在库里为将来使用</li>
 </ul>
 <h2 id="关于工艺映射"><a href="#关于工艺映射" class="headerlink" title="关于工艺映射"></a>关于工艺映射</h2><p>简单说就是把与门、或门、非门换成与非门，或非门</p>
-<h3 id="与门相关映射"><a href="#与门相关映射" class="headerlink" title="与门相关映射"></a>与门相关映射</h3><p>下图就是将与门与非门换成与非门<br><img src="https://s1.328888.xyz/2022/10/11/8LuyJ.jpg" alt="8LuyJ.jpg"><br>映射的方法:</p>
+<h3 id="与门相关映射"><a href="#与门相关映射" class="headerlink" title="与门相关映射"></a>与门相关映射</h3><p>下图就是将与门与非门换成与非门<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/d8c52621ef70ea44.jpg" alt="1.jpg"><br>映射的方法:</p>
 <ul>
 <li>替换与门和或门符号,</li>
 <li>沿着电路的扇出点推动倒相器</li>
-<li>消除反相器对（如下图）<br><img src="https://s1.328888.xyz/2022/10/11/8L6bi.jpg" alt="8L6bi.jpg"><br>举个例子吧！如图<br><img src="https://s1.328888.xyz/2022/10/11/8LwH0.jpg" alt="8LwH0.jpg"><h3 id="或门相关映射"><a href="#或门相关映射" class="headerlink" title="或门相关映射"></a>或门相关映射</h3>如下图：<br><img src="https://s1.328888.xyz/2022/10/11/8La5o.jpg" alt="8La5o.jpg"><br>映射的方法同上:</li>
+<li>消除反相器对（如下图）<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/9fe3efcfa67ad5be.jpg" alt="2.jpg"><br>举个例子吧！如图<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/557aca5b61f2e893.jpg" alt="3.jpg"><h3 id="或门相关映射"><a href="#或门相关映射" class="headerlink" title="或门相关映射"></a>或门相关映射</h3>如下图：<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/2785668d27cafc62.jpg" alt="4.jpg"><br>映射的方法同上:</li>
 <li>替换或门和或门符号,</li>
 <li>沿着电路的扇出点推动倒相器</li>
-<li>消除反相器对（如下图）<br><img src="https://s1.328888.xyz/2022/10/11/8L6bi.jpg" alt="8L6bi.jpg"><br>来个栗子：<br><img src="https://s1.328888.xyz/2022/10/11/8LkzF.jpg" alt="8LkzF.jpg"></li>
+<li>消除反相器对（如下图）<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/9fe3efcfa67ad5be.jpg" alt="2.jpg"><br>来个栗子：<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/8561559eadadb97f.jpg" alt="5.jpg"></li>
 </ul>
 <p>但是看上去好像映射后更加复杂了？那映射的目的是什么？<br>我个人观点啊，是为了把复杂的底层设计给他转换成更高级的模块，如上图中的蓝色框内的，就是一个模块，而且是“验证过的,<br>并且文档详尽的，放在库里为将来使用”，所以这样设计可以更加便于组合。</p>
 <h2 id="验证（着重写写手工验证）"><a href="#验证（着重写写手工验证）" class="headerlink" title="验证（着重写写手工验证）"></a>验证（着重写写手工验证）</h2><p>话不多说，直接上方法：</p>
@@ -197,16 +198,16 @@
 </ul>
 <h2 id="组合逻辑"><a href="#组合逻辑" class="headerlink" title="组合逻辑"></a>组合逻辑</h2><ol>
 <li>功能模块<br>功能模块可以简单理解成c++中的<strong>程序封装</strong>，就是把一些功能封装起来变成一个模块，然后有若干个输入端与若干个输出端，<br>可以实现一些特定的功能。</li>
-<li>使能<br>简单说，就是一个控制信号，有使能和非使能两种，可以控制电路的输出，如下图<br><img src="https://s1.328888.xyz/2022/10/11/8Lx8I.jpg" alt="8Lx8I.jpg"><br>第一个当使能en输出0的时候，则该电路只能输出0，输出1的时候则该电路输出x的值（x为0输出0，x为1输出1，下同）<br>第二个当使能en输出0的时候，则该电路输出1，而输出1的时候则该电路输出x的值</li>
-<li><em><strong>译码</strong></em>（个人感觉很重要）<br>先贴定义：<strong>一种n位二进制编码可以表示2n 个不同的编码信息。译码就是将n位的输入码转换为一个m位的输出码并且有n $\le$ m $\le$ 2 $^n$ ，以保证每一个有效的输入码都产生唯一的输出码</strong><br>简单来说，就是一种函数，输入有n位，代表n位的二进制编码，然后通过译码器这个功能模块输出相应的输出码，类似一个自变量只能对应一个因变量，而反过来则不然。<br>一般称为n-m 译码器, m $\le$ 2 $^n$<br>如下图，就是两个简单的译码器1-2与2-4译码器<br><img src="https://s1.328888.xyz/2022/10/11/8NLLF.jpg" alt="8NLLF.jpg"><br>而要设计输入n输出2$^n$的译码器，则需要不断分割，直到分到1-2译码器，然后用或门或起来。<br>如下图就是一个3-8译码器<br><img src="https://s1.328888.xyz/2022/10/11/8NNGS.jpg" alt="8NNGS.jpg"><br>主要思想就是从右到左，译码器输入端依次减少，如上图，最左侧是几个1-2译码器，然后连接2-4译码器，最后形成3-8译码器</li>
-<li>带使能的译码器<br>如下图真值表，就是在每个输出位置加上一个使能en，如果en等于0则无论输入什么，输出均为0<br><img src="https://s1.328888.xyz/2022/10/11/8N4KB.jpg" alt="8N4KB.jpg"><br>应用：（<strong>重点maybe</strong>）<br>实现m个n变量的函数:</li>
+<li>使能<br>简单说，就是一个控制信号，有使能和非使能两种，可以控制电路的输出，如下图<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/288758e7b6e2a2e5.jpg" alt="6.jpg"><br>第一个当使能en输出0的时候，则该电路只能输出0，输出1的时候则该电路输出x的值（x为0输出0，x为1输出1，下同）<br>第二个当使能en输出0的时候，则该电路输出1，而输出1的时候则该电路输出x的值</li>
+<li><em><strong>译码</strong></em>（个人感觉很重要）<br>先贴定义：<strong>一种n位二进制编码可以表示2n 个不同的编码信息。译码就是将n位的输入码转换为一个m位的输出码并且有n $\le$ m $\le$ 2 $^n$ ，以保证每一个有效的输入码都产生唯一的输出码</strong><br>简单来说，就是一种函数，输入有n位，代表n位的二进制编码，然后通过译码器这个功能模块输出相应的输出码，类似一个自变量只能对应一个因变量，而反过来则不然。<br>一般称为n-m 译码器, m $\le$ 2 $^n$<br>如下图，就是两个简单的译码器1-2与2-4译码器<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/14c25349d4fd5bdb.jpg" alt="7.jpg"><br>而要设计输入n输出2$^n$的译码器，则需要不断分割，直到分到1-2译码器，然后用或门或起来。<br>如下图就是一个3-8译码器<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/4f040df3d0dfee95.jpg" alt="8.jpg"><br>主要思想就是从右到左，译码器输入端依次减少，如上图，最左侧是几个1-2译码器，然后连接2-4译码器，最后形成3-8译码器</li>
+<li>带使能的译码器<br>如下图真值表，就是在每个输出位置加上一个使能en，如果en等于0则无论输入什么，输出均为0<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/08a21b0722a234dc.jpg" alt="9.jpg"><br>应用：（<strong>重点maybe</strong>）<br>实现m个n变量的函数:</li>
 </ol>
 <ul>
 <li>最小项之和(SOM)表达式</li>
 <li>一个n-2$^n$译码器</li>
 <li>m 个或门, 每个输出对应一个<br>方法</li>
 <li>画出函数的真值表</li>
-<li>对应真值表中1出现的项，连到对应或门<br>就是根据真值表中的1连接到对应译码器的输出1的位置，然后或起来，如图<br><img src="https://s1.328888.xyz/2022/10/11/8NHjd.jpg" alt="8NHjd.jpg"></li>
+<li>对应真值表中1出现的项，连到对应或门<br>就是根据真值表中的1连接到对应译码器的输出1的位置，然后或起来，如图<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/de31575b53990df4.jpg" alt="10.jpg"></li>
 </ul>
 <ol start="5">
 <li>编码器（译码器的反向)<br>我觉得很好理解，就是将编码器倒置就行了，就是有2$^n$的输入端，n个输出端，但是有一点不同的是：<strong>典型情况下, 编码器的输入值只有一个为1，二进制编码值对应1出现的位置</strong><br>即输入端中只能有一个为1，对应一个编码。</li>
@@ -219,10 +220,10 @@
 </ol>
 <p><strong>重点</strong>：很重要，2-1多路复用器与4-1多路复用器</p>
 <ul>
-<li>2-1多路选择器，如下，<br>Y = $\overline{S}$I$_0$ + SI$_1$<br>S = 0 选择输入I$_0$<br>S = 1 选择输入I$_1$,如下图<br><img src="https://s1.328888.xyz/2022/10/11/8Ni3I.jpg" alt="8Ni3I.jpg"><br>分析上述电路：</li>
+<li>2-1多路选择器，如下，<br>Y = $\overline{S}$I$_0$ + SI$_1$<br>S = 0 选择输入I$_0$<br>S = 1 选择输入I$_1$,如下图<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/578eadff6fe41e43.jpg" alt="11.jpg"><br>分析上述电路：</li>
 <li>1-2译码器</li>
 <li>2 个使能电路</li>
-<li>2输入或门<br>对于一般情况下, 对一个2$^n$-1多路复用器:<br>需要有n-2$^n$译码器，然后先通过与门，然后通过或门进行连接，如下图4-1多路选择器<br>即先对使能译码，输出四个控制信号，然后分别选择四个输入信号，最后输出一个结果<br><img src="https://s1.328888.xyz/2022/10/11/8lOWw.jpg" alt="8lOWw.jpg"></li>
+<li>2输入或门<br>对于一般情况下, 对一个2$^n$-1多路复用器:<br>需要有n-2$^n$译码器，然后先通过与门，然后通过或门进行连接，如下图4-1多路选择器<br>即先对使能译码，输出四个控制信号，然后分别选择四个输入信号，最后输出一个结果<br><img src="https://s3.bmp.ovh/imgs/2022/10/21/7b77742669e6e4c7.jpg" alt="12.jpg"></li>
 </ul>
 <ol start="2">
 <li>应用：通过选择器实现组合电路：</li>
@@ -241,9 +242,27 @@
       
         <nav class="article-nav">
           
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://upload-bbs.mihoyo.com/upload/2022/10/09/73565430/29905e736a1c51a6fa2e80f0dfc009d5_5462245463591778991.png?x-oss-process=image/auto-orient,0/interlace,1/format,png"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2022/10/12/data/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">数据结构笔记01</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://upload-bbs.mihoyo.com/upload/2022/10/09/73565430/78dc6f9a65f14cac85f86cb3738dda86_7537707535530642320.png?x-oss-process=image/auto-orient,0/interlace,1/format,png"></div>
     
     <div class="card-text">
       
@@ -308,19 +327,19 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>12</span>
+        <span>14</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
 </svg>
-        4
+        6
       </div>
       <div class="count-box--item">
         <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
 </svg>
-        9
+        10
       </div>
     </div>
   </div>
@@ -376,6 +395,18 @@
           </a>
         </li>
       
+        <li class="categorys-list-item">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+            数据结构 (1)
+          </a>
+        </li>
+      
+        <li class="categorys-list-item">
+          <a href="/categories/%E5%92%95%E5%92%95%E6%97%A5%E8%AE%B0/">
+            咕咕日记 (1)
+          </a>
+        </li>
+      
     </ul>
   </div>
 </section>
@@ -389,7 +420,7 @@
   </div>
   <div class="widget-body">
     <div class="tags-cloud">
-      <a href="/tags/Markdown/" style="font-size: 10px;" class="tags-cloud-0">Markdown</a> <a href="/tags/Verilog/" style="font-size: 10px;" class="tags-cloud-0">Verilog</a> <a href="/tags/cs-lab/" style="font-size: 10px;" class="tags-cloud-0">cs-lab</a> <a href="/tags/diary/" style="font-size: 10px;" class="tags-cloud-0">diary</a> <a href="/tags/ics-%E7%9F%A5%E8%AF%86%E7%82%B9/" style="font-size: 10px;" class="tags-cloud-0">ics-知识点</a> <a href="/tags/%E5%92%95%E5%92%95%E6%97%A5%E8%AE%B0/" style="font-size: 20px;" class="tags-cloud-10">咕咕日记</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87/" style="font-size: 15px;" class="tags-cloud-5">学习目标</a> <a href="/tags/%E5%BC%95%E8%A8%80/" style="font-size: 10px;" class="tags-cloud-0">引言</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/" style="font-size: 10px;" class="tags-cloud-0">知识点</a>
+      <a href="/tags/Markdown/" style="font-size: 10px;" class="tags-cloud-0">Markdown</a> <a href="/tags/Verilog/" style="font-size: 10px;" class="tags-cloud-0">Verilog</a> <a href="/tags/cs-lab/" style="font-size: 10px;" class="tags-cloud-0">cs-lab</a> <a href="/tags/diary/" style="font-size: 10px;" class="tags-cloud-0">diary</a> <a href="/tags/ics-%E7%9F%A5%E8%AF%86%E7%82%B9/" style="font-size: 10px;" class="tags-cloud-0">ics-知识点</a> <a href="/tags/%E5%92%95%E5%92%95%E6%97%A5%E8%AE%B0/" style="font-size: 20px;" class="tags-cloud-10">咕咕日记</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87/" style="font-size: 15px;" class="tags-cloud-5">学习目标</a> <a href="/tags/%E5%BC%95%E8%A8%80/" style="font-size: 10px;" class="tags-cloud-0">引言</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;" class="tags-cloud-0">生活</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 15px;" class="tags-cloud-5">笔记</a>
     </div>
   </div>
 </section>

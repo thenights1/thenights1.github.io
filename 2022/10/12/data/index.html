@@ -36,7 +36,7 @@
 
   
 
-  <title>Markdown基础语法总结 | 菜鸟的第一个博客</title>
+  <title>数据结构笔记01 | 菜鸟的第一个博客</title>
 
   
 
@@ -61,7 +61,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://upload-bbs.mihoyo.com/upload/2022/09/27/33087162/56c1464ae633055b7bb74bb3f924328a_3330391065587151535.png)"></div>
+    <div class="post-image" style="background-image: url(https://upload-bbs.mihoyo.com/upload/2022/10/09/73565430/29905e736a1c51a6fa2e80f0dfc009d5_5462245463591778991.png?x-oss-process=image/auto-orient,0/interlace,1/format,png)"></div>
   
 
   <!-- navbar -->
@@ -112,23 +112,25 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Markdown基础语法总结</h1>
+          <h1 class="title-wrap">数据结构笔记01</h1>
           <h2 class="title-sub-wrap">
             <strong>bugmaker</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2022-09-29T11:34:04.000Z" itemprop="datePublished">2022-09-29</time>
+            <time  class="article-date" datetime="2022-10-12T01:15:07.000Z" itemprop="datePublished">2022-10-12</time>
 
             <nav></nav>
             <span>最后更新于</span>
-            <time  class="article-date" datetime="2022-10-07T11:34:04.000Z" itemprop="datePublished">2022-10-07</time>
+            <time  class="article-date" datetime="2022-10-12T01:15:07.000Z" itemprop="datePublished">2022-10-12</time>
 
           </h2>
           <ul class="wrap-list dark">
   
+    <li><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">📒 数据结构</a></li>
+  
 </ul>
           <ul class="wrap-list dark">
   
-    <li><a href="/tags/Markdown/">🏷️ Markdown</a></li>
+    <li><a href="/tags/%E7%AC%94%E8%AE%B0/">🏷️ 笔记</a></li>
   
 </ul>
         </div>
@@ -153,50 +155,16 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章"><a href="#占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章" class="headerlink" title="占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章"></a>占楼，未来的Markdown的一些语法学习我将会在这里实时更新，如果内容过多我会另设文章</h1><h2 id="就当是一个监督学习的文章占楼！"><a href="#就当是一个监督学习的文章占楼！" class="headerlink" title="就当是一个监督学习的文章占楼！"></a>就当是一个监督学习的文章占楼！</h2><p>Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。（搜索引擎得来）<br>Markdown的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。</p>
-<h3 id="1-标题语法"><a href="#1-标题语法" class="headerlink" title="1.标题语法"></a>1.<a href="#1">标题语法</a></h3><h3 id="2-插入代码语法"><a href="#2-插入代码语法" class="headerlink" title="2.插入代码语法"></a>2.<a href="#2">插入代码语法</a></h3><h3 id="3-跳转目录语法"><a href="#3-跳转目录语法" class="headerlink" title="3.跳转目录语法"></a>3.<a href="#3">跳转目录语法</a></h3><h3 id="4-插入图片语法"><a href="#4-插入图片语法" class="headerlink" title="4.插入图片语法"></a>4.<a href="#4">插入图片语法</a></h3><h3 id="5-删除线问题"><a href="#5-删除线问题" class="headerlink" title="5.删除线问题"></a>5.<a href="#5">删除线问题</a></h3><p id="1"></p> 
-
-<h2 id="1-Markdown标题语法"><a href="#1-Markdown标题语法" class="headerlink" title="1.Markdown标题语法"></a>1.Markdown标题语法</h2><p>要创建标题，在单词或短语前面添加井号 (#):由一到六，#越多标题文字显示越小</p>
-<p>如下所示</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"># head1<br>## head2<br>### head3<br>#### head4<br>##### head5<br>###### head6<br></code></pre></td></tr></table></figure>
-<p>效果如下（注意#后面要加空格）</p>
-<h1 id="head1"><a href="#head1" class="headerlink" title="head1"></a>head1</h1><h2 id="head2"><a href="#head2" class="headerlink" title="head2"></a>head2</h2><h3 id="head3"><a href="#head3" class="headerlink" title="head3"></a>head3</h3><h4 id="head4"><a href="#head4" class="headerlink" title="head4"></a>head4</h4><h5 id="head5"><a href="#head5" class="headerlink" title="head5"></a>head5</h5><h6 id="head6"><a href="#head6" class="headerlink" title="head6"></a>head6</h6><p id="2"></p>
-
-<h2 id="2-Markdown代码语法"><a href="#2-Markdown代码语法" class="headerlink" title="2.Markdown代码语法"></a>2.Markdown代码语法</h2><p>（突然想到也没必要按顺序写笔记，应该是学了什么写什么，嘿嘿，好久没更新了，来浅浅更新一下）</p>
-<p>Markdown支持直接用行缩进四个空格或者一个制表符来创建一个代码块,但是这种要注意代码块要和上一段留出一行来，不然就会无法显示代码块</p>
-<pre><code>int i=;
-int j=0;
-</code></pre>
-<p>就像上面这种，但是这样我感觉，很不方便，所以我更倾向于下面这种，在代码块的上下分别用用三个~或者三个```将其包起来，这样还能显示代码行数，我更倾向于这种</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">~~~<br>int i=0;<br>int j=0;<br>~~~<br><br></code></pre></td></tr></table></figure>
-
-<p id="3"></p>
-
-<h2 id="3-Markdown跳转目录语法"><a href="#3-Markdown跳转目录语法" class="headerlink" title="3.Markdown跳转目录语法"></a>3.Markdown跳转目录语法</h2><p>这个我测试了半天，简单如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">[标题名](#标题链接)<br></code></pre></td></tr></table></figure>
-<p>正常来说标题链接就是小标题的名字，但是我发现我用了之后只能在vscode编写的时候可以跳转，而在网页中无效，我也不知道什么原因，搜索之后也不知道，所以我才用了另一种方法，就是在标题的上方加上这句</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">[相应标题](#锚点)<br><br>&lt;p id= &quot;锚点&quot;&gt;&lt;/p&gt;  //这里的锚点最好用数字1234，很好用<br></code></pre></td></tr></table></figure>
-<p>这样就可以跳转啦</p>
-<p id="4"></p>
-
-<h2 id="4-Markdown插入图片语法"><a href="#4-Markdown插入图片语法" class="headerlink" title="4.Markdown插入图片语法"></a>4.Markdown插入图片语法</h2><p>图片相关的代码很简单，常用的就两种（准确的说是我常用），第一种就是简单地插入图片或gif，代码如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">![简单描述，不会显示](图片地址 &quot;图片描述，当鼠标悬停会显示&quot;)<br><br>示例代码：<br><br>![简单描述，不会显示](https://upload-bbs.mihoyo.com/format,gif &quot;图片描述，当鼠标悬停会显示&quot;)<br></code></pre></td></tr></table></figure>
-<p>示例如下<br><img src="https://upload-bbs.mihoyo.com/upload/2022/10/04/286746010/cfec48f4dc28a69315f9986dae9d5561_7495227528267660980.gif?x-oss-process=image/auto-orient,0/interlace,1/format,gif" alt="图片" title="可爱的小东西"></p>
-<p>而如果想插入链接，就是点击图片跳转，需要再用一个方括号将原有Markdown图片语法括起来，然后在旁边加上需要链接的网址，如下代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">[![简单描述，不会显示](图片地址 &quot;图片描述，当鼠标悬停会显示&quot;)](网址)<br></code></pre></td></tr></table></figure>
-
-<p>如下图</p>
-<p><a target="_blank" rel="noopener" href="https://www.bh3.com/"><img src="https://upload-bbs.mihoyo.com/upload/2022/09/27/33087162/56c1464ae633055b7bb74bb3f924328a_3330391065587151535.png#" alt="图片" title="好美"></a></p>
-<p>但是这样图片就太大了，经过一顿百度，发现这东西还和具体的Markdown编辑器有关，不同的编辑器有不同的方式，但是我用的这种好像都不太可以，所以只能回归HTML了，HTML这样表示，可以调整大小，如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">&lt;img src=&quot;https://upload-bbs.mihoyo.com/upload/2022/09/27/33087162/56c1464ae633055b7bb74bb3f924328a_3330391065587151535.png&quot;  width=&quot;50%&quot; height=&quot;50%&quot; &gt;   //也就是<br>&lt;img src=&quot;图片地址&quot; width=&quot; %&quot; hegiht=&quot; %&quot;&gt;<br></code></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://www.bh3.com/"><img src="https://upload-bbs.mihoyo.com/upload/2022/09/27/33087162/56c1464ae633055b7bb74bb3f924328a_3330391065587151535.png" alt="好美" width="50%" height="50%" ></a></p>
-<p id="5"></p>
-
-<h2 id="5-删除线问题-1"><a href="#5-删除线问题-1" class="headerlink" title="5.删除线问题"></a>5.删除线问题</h2><p>今天在写总结的时候发现，删除线并不只是两个~就行，一个也行！？<br>代码如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">~我是删除的~<br>~ 我是删除的 ~<br>~~我是删除的~~<br>~~ 我是删除的 ~~<br>~ ~ 我是删除的 ~ ~<br></code></pre></td></tr></table></figure>
-<p>而效果如下，立竿见影</p>
-<p><del>我是删除的</del><br>~ 我是删除的 ~<br><del>我是删除的</del><br>~~ 我是删除的 ~~<br>~ ~ 我是删除的 ~ ~</p>
-<p>总结：一个~也能用，但是<strong>必须要贴合文字</strong>，一旦有空格就无法显示删除线，两个 ~也是这样（看我这里打了个空格，不打的话就会和前面那个 ~遥相呼应，就会显示删除线，血泪的教训）</p>
+        <h2 id="数据结构第一章："><a href="#数据结构第一章：" class="headerlink" title="数据结构第一章："></a>数据结构第一章：</h2><p>这一章重点主要就是算法的算法的性能分析，主要有：</p>
+<ul>
+<li>空间复杂度</li>
+<li>时间复杂度</li>
+<li>渐进的空间复杂度</li>
+<li>渐进的时间复杂度</li>
+</ul>
+<ol>
+<li>空间复杂度（由于</li>
+</ol>
 
       </section>
 
@@ -207,12 +175,12 @@ int j=0;
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://upload-bbs.mihoyo.com/upload/2022/09/29/8736854/1ce9dc104962a27e0599ad27fd96b729_7722964065061968017.png"></div>
+      <div class="card-cover" background-image-lazy data-img="https://upload-bbs.mihoyo.com/upload/2022/10/17/73565430/8357f3b58ae675a7033930ddebd517ee_6135029277314663340.png?x-oss-process=image//resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,png"></div>
     
     <div class="card-text">
       
-        <a href="/2022/09/30/verilog/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">数字逻辑常用代码总结（随实验课更新）</h2>
+        <a href="/2022/10/21/10-21/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">忙完最近的ddl，重新拾起博客</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -224,12 +192,12 @@ int j=0;
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://upload-bbs.mihoyo.com/upload/2022/09/16/321004596/f1eb079e519829230c07f13f33fb930e_545076835485499769.jpg?x-oss-process=image/auto-orient,0/interlace,1/format,jpg"></div>
+      <div class="card-cover" background-image-lazy data-img="https://upload-bbs.mihoyo.com/upload/2022/10/09/73565430/28e12213c67d1dd593f4095a7afabdb9_8284219160215869295.png?x-oss-process=image/auto-orient,0/interlace,1/format,png"></div>
     
     <div class="card-text">
       
-        <a href="/2022/09/29/my-first-blog/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">第一篇文章！那就记录一下这一天吧！</h2>
+        <a href="/2022/10/10/10-10/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">数字逻辑第三章知识点总结</h2>
         </a>
       
       <div class="card-text--row">Older</div>
